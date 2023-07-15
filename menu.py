@@ -1,5 +1,7 @@
+import pygame
+pygame.mixer.init()
+musica = pygame.mixer.Sound("./assets/musicajogo.mp3").play(-1).set_volume(0.1)
 def menu():
-    import pygame
     import controle
     pygame.init()
     janela = pygame.display.set_mode((640,640))
