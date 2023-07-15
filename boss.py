@@ -24,7 +24,7 @@ class Boss(pygame.sprite.Sprite):
     
     def initAnimations(self):
         self.sprites = []
-        self.animations = {'idle': [], 'walking': [], 'attacking': [], 'dying': []}
+        self.animations = {'idle': [], 'walking': [], 'attacking': []}
         self.velocidade_animacao = 0.2
         self.status = 'idle'
         self.facing_right = True
@@ -36,8 +36,6 @@ class Boss(pygame.sprite.Sprite):
             self.animations['walking'].append(self.sprites[i])
         for i in range(16,27):
             self.animations['attacking'].append(self.sprites[i])
-        for i in range(28,54):
-            self.animations['dying'].append(self.sprites[i])
 
         self.current_sprite = 0
         self.image = self.sprites[self.current_sprite]
